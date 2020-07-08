@@ -12,7 +12,7 @@ p = (x-a).^(-1.*alpha)*(b-x).^(-1.*(1.*beta));
 
 for z = 1:1:2
 for k = 1:1:n
-    el = a + k.*(b-a)./n; %длина составного отрезка
+    el = a + k.*(b-a)./n; %length of compound segment
     koord = [koord el]
 end
 for i = 1:1:3
@@ -23,7 +23,7 @@ for i = 1:1:3
     for k = 0:1:2
         m(k+1) = int(p.*x.^k, x, koord(i), koord(i+1));
     end
-    %вычисление моментов 
+    %calculating moments 
 k=100000;
 h=(koord(i+1)-koord(i))/k;
 x=koord(i):h:koord(i+1);
